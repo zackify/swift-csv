@@ -1,10 +1,22 @@
 # swift-csv
 
+## Install
+
+Add to your Package.swift dependencies:
+
+```
+.package(url: "https://github.com/zackify/swift-csv.git", from: "0.0.2")
+```
+
+## Example
+
 Generate CSVs with dynamic column headings and row data.
 
 If you have a data structure with unknown amount of values, it can be frustrating to make that fit into a CSV. For example, imagine a CSV with people, and an unknown number of addresses. With this library, you can return an array, and column headings will be calculated for you:
 
 ```swift
+import SwiftCSV
+
 let csv = GenerateCSV(testRows) {
     [
         $0.text(name: "Name", value: $0.row.name),

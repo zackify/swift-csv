@@ -1,5 +1,5 @@
 import XCTest
-@testable import swift_csv
+@testable import SwiftCSV
 
 struct Address {
   var street: String
@@ -40,7 +40,7 @@ final class swift_csvTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
 
-        let csv = GenerateCSV(testRows) {
+        let csv = SwiftCSV.generate(testRows) {
             [
                 $0.text(name: "Name", value: $0.row.name),
                 $0.array(name: "Address", value: $0.row.addresses) { $0.street },
