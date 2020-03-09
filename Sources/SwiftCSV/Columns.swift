@@ -1,4 +1,4 @@
-class Columns {
+public class Columns {
   var counts: [String: Int]
   var tempCounts: [String: Int]
   var names: [String]
