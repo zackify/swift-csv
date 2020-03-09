@@ -1,7 +1,7 @@
 import XCTest
 @testable import swift_csv
 
-       struct Address {
+struct Address {
   var street: String
 }
 
