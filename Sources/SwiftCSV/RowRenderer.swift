@@ -1,4 +1,4 @@
-class RowRenderer<Row> {
+public class RowRenderer<Row> {
   public var row: Row
   var columns: Columns
   var rowData: [String]
