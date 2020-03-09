@@ -5,7 +5,7 @@
 Add to your Package.swift dependencies:
 
 ```
-.package(url: "https://github.com/zackify/swift-csv.git", from: "0.0.2")
+.package(url: "https://github.com/zackify/swift-csv.git", from: "0.1.0")
 ```
 
 ## Example
