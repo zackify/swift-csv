@@ -1,4 +1,4 @@
-class Cell {
+public class Cell {
   var name: String
   var value: [String]
 
