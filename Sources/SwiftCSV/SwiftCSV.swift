@@ -1,5 +1,5 @@
 public struct SwiftCSV {
-  static func generate<Row>(_ rows: [Row], renderRow: (RowRenderer<Row>) -> [Cell]) -> String {
+  public static func generate<Row>(_ rows: [Row], renderRow: (RowRenderer<Row>) -> [Cell]) -> String {
     let columns = Columns()
 
     // We loop over all rows once, so we can find the column headers

@@ -1,5 +1,5 @@
 class RowRenderer<Row> {
-  var row: Row
+  public var row: Row
   var columns: Columns
   var rowData: [String]
 
@@ -9,12 +9,12 @@ class RowRenderer<Row> {
     self.columns = columns
   }
 
-  func text(name: String, value: String) -> Cell {
+  public func text(name: String, value: String) -> Cell {
     self.columns.incrementCount(name)
     return Cell([value], name)
   } 
 
-  func array<Value>(name: String, value: [Value], callback: (Value) -> String) -> Cell {   
+  public func array<Value>(name: String, value: [Value], callback: (Value) -> String) -> Cell {   
     let items = value.map { (item) -> String in
       self.columns.incrementCount(name)
       return callback(item)

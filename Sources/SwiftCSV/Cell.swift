@@ -7,7 +7,7 @@ class Cell {
     self.value = value
   }
 
-  func text(_ columns: Columns) -> String {
+  public func text(_ columns: Columns) -> String {
     let lastIndex = columns.counts[self.name]! - 1
 
     for index in 0...lastIndex {
