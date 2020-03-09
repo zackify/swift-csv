@@ -1,4 +1,4 @@
-struct SwiftCSV {
+public struct SwiftCSV {
   static func generate<Row>(_ rows: [Row], renderRow: (RowRenderer<Row>) -> [Cell]) -> String {
     let columns = Columns()
 

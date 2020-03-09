@@ -5,7 +5,7 @@
 Add to your Package.swift dependencies:
 
 ```
-.package(url: "https://github.com/zackify/swift-csv.git", from: "0.0.2")
+.package(url: "https://github.com/zackify/swift-csv.git", from: "0.0.3")
 ```
 
 ## Example
@@ -17,7 +17,7 @@ If you have a data structure with unknown amount of values, it can be frustratin
 ```swift
 import SwiftCSV
 
-let csv = GenerateCSV(testRows) {
+let csv = SwiftCSV.generate(testRows) {
     [
         $0.text(name: "Name", value: $0.row.name),
         $0.array(name: "Address", value: $0.row.addresses) { $0.street },
