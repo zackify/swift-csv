@@ -23,7 +23,7 @@ let testRows = [
     ]
   ),
   Person(
-    id: "1", 
+    id: "2", 
     name: "Bob", 
     phoneNumber: "483884828", 
     addresses: [
@@ -31,8 +31,16 @@ let testRows = [
       Address(street: "California"),
       Address(street: "Texas"),
     ]
+  ),
+  Person(
+    id: "3",
+    name: "Jim",
+    phoneNumber: "5554443333",
+    addresses: [
+      Address(street: "Idaho,\n not \"Ohio\"")
+    ]
   )
-] 
+]
 
 final class swift_csvTests: XCTestCase {
     func testExample() {
@@ -53,6 +61,7 @@ final class swift_csvTests: XCTestCase {
             "Name","Address","Address #2","Address #3","Phone number"
             "Test","New York","California","","5493939393"
             "Bob","Montana","California","Texas","483884828"
+            "Jim","Idaho,  not \"\"Ohio\"\"","","","5554443333"
             """
         )    }
 
