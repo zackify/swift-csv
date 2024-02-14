@@ -1,3 +1,5 @@
+import Foundation
+
 public struct SwiftCSV {
   public static func generate<Row>(_ rows: [Row], renderRow: (RowRenderer<Row>) -> [Cell]) -> String {
     let columns = Columns()
@@ -26,7 +28,12 @@ public struct SwiftCSV {
 }
 
 func arrayToCSVRow(_ strings: [String]) -> String {
-  return strings.map { 
-    "\"\($0)\"" 
+  return strings.map {
+    let cleanString = $0
+      .replacingOccurrences(of: "\"", with: "\"\"")
+      .replacingOccurrences(of: "\r\n", with: " ")
+      .replacingOccurrences(of: "\r", with: " ")
+      .replacingOccurrences(of: "\n", with: " ")
+    return "\"\(cleanString)\""
   }.joined(separator: ",")
 }
